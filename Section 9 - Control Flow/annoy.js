@@ -6,9 +6,9 @@ while (answer !== "yes" && answer !== "yeah"){
 
 alert("Yay!! We made it!!")
 
-//Using indexOf
 
-V2
+//Version 2 Using indexOf
+
 var answer = prompt("Are we there yet?");
 
 while (answer.indexOf("yes") === -1 ){
