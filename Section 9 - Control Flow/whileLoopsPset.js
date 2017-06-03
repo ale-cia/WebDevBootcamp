@@ -29,7 +29,7 @@ var num = 10;
 var num = 301;
 	while(num <= 333){
 		console.log(num);
-		num+= 2;
+		num += 2;
 	}
 
 // var num = 300;
