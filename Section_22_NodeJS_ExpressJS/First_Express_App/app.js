@@ -1,37 +1,30 @@
 var express = require('express');
-
 var app = express();
 
-     //Creating routes
+//Creating Routes
 // '/' => 'Hi there!'
-
 app.get('/', function(req, res){
-    res.send('You made it to the ROOT!');
+    res.send('Hi there!');
 });
 
-
-    // 'bye' => 'Goodbye' 
-
-
+// 'bye' => 'Goodbye' 
 app.get('/bye', function(req, res){
     res.send('Buh bye');
 });
 
-    // 'dog' => 'meow'  
-
-
+// 'horse' => 'whinny'  
 app.get('/dog', function(req, res){
-    res.send('MEOW!');
+    res.send('WHINNY!!!');
 });
 
 
-app.get('/travel/:', function(req, res){
-         var music = req.params.travelDestination;
-         res.send('WELCOME TO THE ' + travel.toUpperCase() + ' ' + 'Travel!');
+app.get('/r/:subredditName', function(req, res){
+     var subreddit = req.params.subredditName;
+     res.send('WELCOME TO THE ' + subreddit.toUpperCase() + ' ' + 'SubReddit!');
 });
 
-app.get('/travel/:travelDestination/comments/:id/:title/', function(req, res){
-         res.send('WELCOME TO A COMMENTS PAGE!');
+app.get('/r/:subredditName/comments/:id/:title/', function(req, res){
+     res.send('WELCOME TO A COMMENTS PAGE!');
 });
 
 app.get('*', function(req, res){
